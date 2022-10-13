@@ -1,0 +1,60 @@
+node-foreground-child (2.0.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.5.0
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Add upstream/metadata
+  * Use pkg-js-tools auto test & install
+  * Remove useless node-cross-spawn dependency (Closes: #959787)
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 05 May 2020 15:17:57 +0200
+
+node-foreground-child (2.0.0-1) unstable; urgency=medium
+
+  * New upstream version. Need recent node version
+  * Move to /usr/share
+  * Move to section javascript
+  * Bump debhelper and policy (no changes)
+
+ -- Bastien Roucariès <rouca@debian.org>  Sun, 15 Sep 2019 22:21:12 +0200
+
+node-foreground-child (1.5.6-6) unstable; urgency=medium
+
+  * Only run basic test. Immortal fail on buildd
+
+ -- Bastien Roucariès <rouca@debian.org>  Sun, 06 May 2018 23:31:47 +0200
+
+node-foreground-child (1.5.6-5) unstable; urgency=medium
+
+  * Increase timeout to 300s
+    thanks to Graham Inggs (Closes: #894797).
+  * Bump compat and policy (no changes)
+
+ -- Bastien Roucariès <rouca@debian.org>  Sun, 06 May 2018 21:12:32 +0200
+
+node-foreground-child (1.5.6-4) unstable; urgency=medium
+
+  * Remove dump from testsuite. Use jsonstream. Fix
+    autopkgtest
+
+ -- Bastien Roucariès <rouca@debian.org>  Sat, 02 Sep 2017 14:28:42 +0200
+
+node-foreground-child (1.5.6-3) unstable; urgency=medium
+
+  * Increase delay in test hopefully fixing FTBFS: "test failures",
+    thanks to Graham Inggs (Closes: #873713).
+
+ -- Bastien Roucariès <rouca@debian.org>  Fri, 01 Sep 2017 14:19:37 +0200
+
+node-foreground-child (1.5.6-2) unstable; urgency=medium
+
+  * Try to debug FTBFS, by dumping more info from TAP
+
+ -- Bastien Roucariès <rouca@debian.org>  Wed, 30 Aug 2017 15:51:05 +0200
+
+node-foreground-child (1.5.6-1) unstable; urgency=low
+
+  * Initial release (Closes: #872722)
+
+ -- Bastien Roucariès <rouca@debian.org>  Sun, 20 Aug 2017 15:26:16 +0200

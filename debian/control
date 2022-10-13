@@ -1,0 +1,33 @@
+Source: node-foreground-child
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Bastien Roucariès <rouca@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 12)
+ , node-signal-exit <!nocheck>
+ , node-tap (>= 8.0.0) <!nocheck>
+ , pkg-js-tools (>= 0.9.35~)
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-foreground-child
+Vcs-Git: https://salsa.debian.org/js-team/node-foreground-child.git
+Homepage: https://github.com/tapjs/foreground-child
+Rules-Requires-Root: no
+
+Package: node-foreground-child
+Architecture: all
+Depends: ${misc:Depends}
+ , node-signal-exit
+ , nodejs (>= 10)
+Description: helper running a child process as a foreground process
+ This Node.js module emulate simple control group in pure javacript.
+ It runs a child process as foreground process redirecting output
+ to stdout and exiting main process as soon as child exist.
+ .
+ This module could be used for implementating TAP test
+ for Node.js.
+ .
+ TAP is a simple text-based interface between testing modules
+ implemented in many popular languages.
+ .
+ Node.js is an event-based server-side JavaScript engine.
