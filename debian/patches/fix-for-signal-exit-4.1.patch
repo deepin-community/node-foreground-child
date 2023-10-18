@@ -1,0 +1,23 @@
+Description: ts patch for signal-exit >= 4.1
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2023-08-17
+
+--- a/test/basic.ts
++++ b/test/basic.ts
+@@ -52,6 +52,7 @@
+       }
+       break
+     case 'promiseExitHandler':
++// @ts-ignore
+       cb = async (exitCode) => {
+         const expectedExitCode = +process.argv[3]
+         if (expectedExitCode !== exitCode) {
+@@ -74,6 +75,7 @@
+     __filename,
+     'child',
+   ].concat(process.argv.slice(3))
++// @ts-ignore
+   const child = fg(program, args, cb)
+ 
+   if (process.argv[3] === 'onExit') {
