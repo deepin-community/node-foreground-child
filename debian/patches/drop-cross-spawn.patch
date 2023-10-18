@@ -1,0 +1,27 @@
+Description: drop cros-spawn
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2023-08-17
+
+--- node-foreground-child-3.1.1.orig/src/index.ts
++++ node-foreground-child-3.1.1/src/index.ts
+@@ -2,18 +2,13 @@ import {
+   ChildProcess,
+   SendHandle,
+   Serializable,
+-  spawn as nodeSpawn,
++  spawn,
+   SpawnOptions,
+ } from 'child_process'
+-import crossSpawn from 'cross-spawn'
+ import { onExit } from 'signal-exit'
+ import { allSignals } from './all-signals.js'
+ import { watchdog } from './watchdog.js'
+ 
+-/* c8 ignore start */
+-const spawn = process?.platform === 'win32' ? crossSpawn : nodeSpawn
+-/* c8 ignore stop */
+-
+ /**
+  * The signature for the cleanup method.
+  *

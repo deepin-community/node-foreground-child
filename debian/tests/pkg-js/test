@@ -1,1 +1,3 @@
-tap -t 300 test/basic.js
+pkgjs-ln ts-node
+pkgjs-ln @types/tap
+tap -T -R spec --no-cov --bail test/

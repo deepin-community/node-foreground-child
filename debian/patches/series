@@ -1,2 +1,2 @@
-0001-package-does-not-need-tap-8.0.1-use-tap-8.0.0.patch
-0002-Increase-timeout-in-order-to-avoid-build-failure.patch
+drop-cross-spawn.patch
+fix-for-signal-exit-4.1.patch
